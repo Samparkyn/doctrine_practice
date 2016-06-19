@@ -10,6 +10,16 @@ use Symfony\Component\HttpFoundation\Response;
 
 class GenusController extends Controller
 {
+  
+  /**
+    * @Route("/genus/new")
+    */
+   public function newAction()
+   {
+      $genus = new Genus();
+       $genus->setName('Octopus'.rand(1, 100));
+   }
+   
     /**
      * @Route("/genus/{genusName}")
      */
