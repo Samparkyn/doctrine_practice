@@ -5,10 +5,17 @@
             <tr>
                 <th>Genus</th>
                 <th># of species</th>
+                <th>Last updated</th>
             </tr>
         </thead>
         <tbody>
-          
+          {% for genus in genuses %}
+          <tr>
+               <td>{{ genus.name }}</td>
+               <td>{{ genus.speciesCount }}</td>
+               <td>{{ genus.updatedAt|date('Y-m-d') }}</td>
+           </tr>
+           {% endfor %}
         </tbody>
   </table>
 {% endblock %}

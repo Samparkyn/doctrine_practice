@@ -34,6 +34,11 @@ class Genus{
     * @ORM\Column(type="string", nullable=true)
     */
    private $funFact;
+   
+   public function getUpdatedAt()
+   {
+       return new \DateTime('-'.rand(0, 100).' days');
+   }
   
 
     /**
