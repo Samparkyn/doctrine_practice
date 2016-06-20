@@ -21,6 +21,19 @@ class Genus{
     * @ORM\Column(type="string")
     */
    private $name;
+   
+   /**
+    * @ORM\Column(type="string")
+    */
+   private $subFamily;
+   /**
+    * @ORM\Column(type="integer")
+    */
+   private $speciesCount;
+   /**
+    * @ORM\Column(type="string")
+    */
+   private $funFact;
   
 
     /**
@@ -55,5 +68,77 @@ class Genus{
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Set subFamily
+     *
+     * @param string $subFamily
+     *
+     * @return Genus
+     */
+    public function setSubFamily($subFamily)
+    {
+        $this->subFamily = $subFamily;
+
+        return $this;
+    }
+
+    /**
+     * Get subFamily
+     *
+     * @return string
+     */
+    public function getSubFamily()
+    {
+        return $this->subFamily;
+    }
+
+    /**
+     * Set speciesCount
+     *
+     * @param integer $speciesCount
+     *
+     * @return Genus
+     */
+    public function setSpeciesCount($speciesCount)
+    {
+        $this->speciesCount = $speciesCount;
+
+        return $this;
+    }
+
+    /**
+     * Get speciesCount
+     *
+     * @return integer
+     */
+    public function getSpeciesCount()
+    {
+        return $this->speciesCount;
+    }
+
+    /**
+     * Set funFact
+     *
+     * @param string $funFact
+     *
+     * @return Genus
+     */
+    public function setFunFact($funFact)
+    {
+        $this->funFact = $funFact;
+
+        return $this;
+    }
+
+    /**
+     * Get funFact
+     *
+     * @return string
+     */
+    public function getFunFact()
+    {
+        return $this->funFact;
     }
 }

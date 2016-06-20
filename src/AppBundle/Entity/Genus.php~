@@ -21,5 +21,52 @@ class Genus{
     * @ORM\Column(type="string")
     */
    private $name;
+   
+   /**
+    * @ORM\Column(type="string")
+    */
+   private $subFamily;
+   /**
+    * @ORM\Column(type="integer")
+    */
+   private $speciesCount;
+   /**
+    * @ORM\Column(type="string")
+    */
+   private $funFact;
   
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Genus
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
 }
