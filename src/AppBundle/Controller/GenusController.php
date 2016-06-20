@@ -38,7 +38,11 @@ class GenusController extends Controller
       $genuses = $em->getRepository('AppBundle:Genus')
            ->findAll();
            
-      dump($genuses);die;
+      return $this->render('genus/list.html.twig', [
+        'genuses' => $genuses
+      ]);
+           
+      // dump($genuses);die; use this to check what the data will look like (what the query will be)
     }
    
     /**
