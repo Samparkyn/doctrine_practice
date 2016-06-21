@@ -148,4 +148,28 @@ class GenusNote {
     {
         return $this->createdAt;
     }
+
+    /**
+     * Set genus
+     *
+     * @param \AppBundle\Entity\Genus $genus
+     *
+     * @return GenusNote
+     */
+    public function setGenus(\AppBundle\Entity\Genus $genus = null)
+    {
+        $this->genus = $genus;
+
+        return $this;
+    }
+
+    /**
+     * Get genus
+     *
+     * @return \AppBundle\Entity\Genus
+     */
+    public function getGenus()
+    {
+        return $this->genus;
+    }
 }
