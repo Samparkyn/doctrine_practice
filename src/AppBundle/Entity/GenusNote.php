@@ -37,6 +37,11 @@ class GenusNote {
      */
   private $createdAt;
   
+  /**
+   * @ORM\ManyToOne(targetEntity="Genus")
+   */
+  private $genus;
+  
 
     /**
      * Get id
