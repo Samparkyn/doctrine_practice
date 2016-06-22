@@ -36,6 +36,11 @@ class Genus{
    private $funFact;
    
    /**
+     * @ORM\OneToMany(targetEntity="GenusNote", mappedBy="genus")
+     */
+    private $notes;
+   
+   /**
     * @ORM\Column(type="boolean")
     */
    private $isPublished = true;
@@ -48,6 +53,11 @@ class Genus{
    public function setIsPublished($isPublished)
    {
        $this->isPublished = $isPublished;
+   }
+   
+   public function __construct()
+   {
+       $this->notes = new ArrayCollection();
    }
   
 
@@ -155,5 +165,10 @@ class Genus{
     public function getFunFact()
     {
         return $this->funFact;
+    }
+    
+    public function getNotes()
+    {
+        return $this->notes;
     }
 }
